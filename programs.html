@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programs — Movement for Youth Development Ghana</title>
+  <meta name="description" content="MYD Ghana's four programs: Youth Farm Project, Meet-the-Mayor Conference, Youth in Peace & Security, and the Volunteer Program." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav scrolled" id="mainNav" data-transparent="false">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="assets/images/logo.png" alt="MYD Ghana Logo" />
+      <div class="nav__logo-text">
+        <span>MYD Ghana</span>
+        <span>It's About Time</span>
+      </div>
+    </a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="impact.html">Impact</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html" class="nav__cta">Get Involved</a>
+    </div>
+    <button class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav__mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programs.html">Programs</a>
+  <a href="impact.html">Impact</a>
+  <a href="team.html">Team</a>
+  <a href="contact.html">Get Involved</a>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Programs</span></div>
+    <p class="page-hero__overline">Four Programs · Three Mandates</p>
+    <h1 class="page-hero__title">Our <em>Programs</em></h1>
+    <p class="page-hero__subtitle">Each program tackles a specific barrier facing young Ghanaians — from land access and governance to peacebuilding and skills development. Select a program below to explore it.</p>
+  </div>
+</div>
+
+<!-- TABBED PROGRAM NAVIGATION -->
+<div style="background: var(--green); position: sticky; top: var(--nav-h); z-index: 100; border-bottom: 1px solid rgba(255,255,255,0.1);">
+  <div style="max-width: var(--max-w); margin: 0 auto; padding: 0 40px;">
+    <div style="display: flex; gap: 0; overflow-x: auto;">
+      <button class="programs-tab active" data-tab="yfp" style="color: rgba(255,255,255,0.75); border-bottom-color: transparent;">
+        <span style="color: var(--gold); font-family: var(--font-mono); font-size: 0.6rem; display: block; margin-bottom: 3px;">01</span>
+        Youth Farm Project
+      </button>
+      <button class="programs-tab" data-tab="mtm" style="color: rgba(255,255,255,0.75); border-bottom-color: transparent;">
+        <span style="color: rgba(233,168,37,0.6); font-family: var(--font-mono); font-size: 0.6rem; display: block; margin-bottom: 3px;">02</span>
+        Meet-the-Mayor
+      </button>
+      <button class="programs-tab" data-tab="yps" style="color: rgba(255,255,255,0.75); border-bottom-color: transparent;">
+        <span style="color: rgba(233,168,37,0.6); font-family: var(--font-mono); font-size: 0.6rem; display: block; margin-bottom: 3px;">03</span>
+        Youth in Peace &amp; Security
+      </button>
+      <button class="programs-tab" data-tab="volunteers" style="color: rgba(255,255,255,0.75); border-bottom-color: transparent;">
+        <span style="color: rgba(233,168,37,0.6); font-family: var(--font-mono); font-size: 0.6rem; display: block; margin-bottom: 3px;">04</span>
+        Volunteer Program
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .programs-tab {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 20px 28px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 1.3;
+  }
+  .programs-tab:hover { color: var(--gold); background: rgba(255,255,255,0.05); }
+  .programs-tab.active { color: var(--gold) !important; border-bottom-color: var(--gold) !important; background: rgba(255,255,255,0.05); }
+  .program-panel { display: none; animation: fadeIn 0.4s ease; }
+  .program-panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+
+<!-- ============================================================
+     PANEL 1: YOUTH FARM PROJECT
+     ============================================================ -->
+<div id="panel-yfp" class="program-panel active">
+  <section style="padding: 80px 40px; background: var(--white);">
+    <div style="max-width: var(--max-w); margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;" class="program-layout">
+        <div>
+          <div class="program-hero-label">01 · Flagship Program</div>
+          <h2 class="section__title reveal" style="font-size: clamp(2.2rem, 4vw, 3.4rem);">Feeding a<br><em>New Generation</em><br>of Farmers.</h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p style="color: var(--text-mid); line-height: 1.8; margin-top: 24px; font-size: 1.1rem;" class="reveal reveal-delay-2">
+            Ghana's average farmer is 55 years old. Youth account for only 5% of the agricultural workforce. The Youth Farm Project is MYD's answer — a comprehensive model that addresses the three biggest barriers: lack of access to finance (37%), land (14%), and technical training (12%).
+          </p>
+          <p style="color: var(--text-mid); line-height: 1.8; margin-top: 16px; font-size: 1.05rem;" class="reveal reveal-delay-3">
+            The YFP addresses all three simultaneously — through Climate-Smart Agriculture training, secured farmland per district, and integrated digital farm management tools.
+          </p>
+          <div class="sdg-tags reveal reveal-delay-3">
+            <span class="sdg-tag">SDG 1 — No Poverty</span>
+            <span class="sdg-tag">SDG 2 — Zero Hunger</span>
+            <span class="sdg-tag">SDG 8 — Decent Work</span>
+            <span class="sdg-tag">SDG 13 — Climate Action</span>
+          </div>
+          <div style="display: flex; gap: 32px; margin-top: 40px;" class="reveal reveal-delay-3">
+            <div>
+              <div style="font-family: var(--font-head); font-size: 2.8rem; font-weight: 700; color: var(--green);">100</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Pilot cohort</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-head); font-size: 2.8rem; font-weight: 700; color: var(--green);">5</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Northern Regions</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-head); font-size: 2.8rem; font-weight: 700; color: var(--green);">50ac</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Per district</div>
+            </div>
+          </div>
+          <div style="margin-top: 40px;" class="reveal reveal-delay-4">
+            <a href="contact.html" class="btn btn--green">Apply for YFP →</a>
+          </div>
+        </div>
+        <div>
+          <div class="img-slot reveal" style="min-height: 480px; border-radius: 12px;">
+            <img src="assets/images/prog-yfp.jpg" alt="Youth Farm Project in action" />
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 64px;" class="reveal reveal-delay-1">
+        <div class="program-detail-item">
+          <div class="program-detail-item__icon">🌱</div>
+          <div class="program-detail-item__label">Training Delivered</div>
+          <div class="program-detail-item__value">Intensive Climate-Smart Agriculture (CSA), agri-business, and financial literacy training for every cohort participant.</div>
+        </div>
+        <div class="program-detail-item">
+          <div class="program-detail-item__icon">🏞️</div>
+          <div class="program-detail-item__label">Land Access</div>
+          <div class="program-detail-item__value">50 acres of secured farmland per district, via 10-year land tenure agreements with local chiefs — eliminating the biggest barrier.</div>
+        </div>
+        <div class="program-detail-item">
+          <div class="program-detail-item__icon">💻</div>
+          <div class="program-detail-item__label">Technology Integration</div>
+          <div class="program-detail-item__value">Farm management software, soil monitoring tools, and direct market access platforms to modernise youth farming.</div>
+        </div>
+        <div class="program-detail-item">
+          <div class="program-detail-item__icon">📍</div>
+          <div class="program-detail-item__label">Geographic Reach</div>
+          <div class="program-detail-item__value">All 5 regions of Northern Ghana — Northern, North East, Savannah, Upper East, and Upper West regions.</div>
+        </div>
+        <div class="program-detail-item">
+          <div class="program-detail-item__icon">👥</div>
+          <div class="program-detail-item__label">Pilot Cohort</div>
+          <div class="program-detail-item__value">100 young people in the current pilot — building the evidence base for scale across Northern Ghana.</div>
+        </div>
+        <div class="program-detail-item">
+          <div class="program-detail-item__icon">🎯</div>
+          <div class="program-detail-item__label">Long-Term Target</div>
+          <div class="program-detail-item__value">Aligned with national goals reaching 4.3M youth and women in agriculture, contributing to 1M+ jobs created.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PANEL 2: MEET-THE-MAYOR
+     ============================================================ -->
+<div id="panel-mtm" class="program-panel">
+  <section style="padding: 80px 40px; background: var(--cream-dark);">
+    <div style="max-width: var(--max-w); margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;" class="program-layout">
+        <div>
+          <div class="img-slot reveal" style="min-height: 360px; border-radius: 12px; margin-bottom: 16px;">
+            <img src="assets/images/prog-mtm.jpg" alt="Meet-the-Mayor Conference" />
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;" class="reveal reveal-delay-1">
+            <div class="img-slot" style="min-height: 200px; border-radius: 10px;">
+              <img src="assets/images/prog-mtm-breakout.jpg" alt="Breakout Session" />
+            </div>
+            <div class="img-slot" style="min-height: 200px; border-radius: 10px;">
+              <img src="assets/images/prog-mtm-manifesto.jpg" alt="Youth Manifesto" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="program-hero-label">02 · Governance &amp; Advocacy</div>
+          <h2 class="section__title reveal" style="font-size: clamp(2.2rem, 4vw, 3.4rem);"><em>Youth Voices</em><br>in the Room<br>Where Policy Happens.</h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p style="color: var(--text-mid); line-height: 1.8; margin-top: 24px; font-size: 1.1rem;" class="reveal reveal-delay-2">
+            The Meet-the-Mayor Youth Conference bridges the institutional gap between young citizens and local government — acknowledging youth not as subjects of policy, but as contributors to it.
+          </p>
+          <p style="color: var(--text-mid); line-height: 1.8; margin-top: 16px; font-size: 1.05rem;" class="reveal reveal-delay-3">
+            100 delegates aged 18–35 engage directly with District Assembly Mayors. Thematic breakout sessions cover governance, peace and security, sexual health, entrepreneurship, and environmental protection. A formal <strong>Youth Manifesto</strong> is submitted as policy petition.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px;" class="reveal reveal-delay-3">
+            <div style="background: var(--white); padding: 24px; border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 8px;">
+              <div style="font-family: var(--font-head); font-size: 2.4rem; font-weight: 700; color: var(--green);">100</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Delegates/conference</div>
+            </div>
+            <div style="background: var(--white); padding: 24px; border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 8px;">
+              <div style="font-family: var(--font-head); font-size: 2.4rem; font-weight: 700; color: var(--green);">18–35</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Age range targeted</div>
+            </div>
+            <div style="background: var(--white); padding: 24px; border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 8px;">
+              <div style="font-family: var(--font-head); font-size: 2.4rem; font-weight: 700; color: var(--green);">5</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Thematic sessions</div>
+            </div>
+            <div style="background: var(--white); padding: 24px; border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 8px;">
+              <div style="font-family: var(--font-head); font-size: 1.4rem; font-weight: 700; color: var(--green);">Manifesto</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Formal policy petition</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px; padding: 22px 28px; background: var(--green-dark); border-radius: 10px;" class="reveal reveal-delay-4">
+            <p style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 12px; text-transform: uppercase;">Breakout Themes</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="tag" style="background: rgba(233,168,37,0.15); color: var(--gold);">Governance</span>
+              <span class="tag" style="background: rgba(233,168,37,0.15); color: var(--gold);">Peace &amp; Security</span>
+              <span class="tag" style="background: rgba(233,168,37,0.15); color: var(--gold);">Sexual Health</span>
+              <span class="tag" style="background: rgba(233,168,37,0.15); color: var(--gold);">Entrepreneurship</span>
+              <span class="tag" style="background: rgba(233,168,37,0.15); color: var(--gold);">Environment</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 32px;" class="reveal reveal-delay-4">
+            <a href="contact.html" class="btn btn--green">Register Interest →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PANEL 3: YOUTH IN PEACE & SECURITY
+     ============================================================ -->
+<div id="panel-yps" class="program-panel">
+  <section style="padding: 80px 40px; background: var(--green-dark);">
+    <div style="max-width: var(--max-w); margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; background: rgba(233,168,37,0.1); display: inline-block; padding: 7px 16px; border-radius: 4px;">03 · Community Resilience</div>
+          <h2 style="font-family: var(--font-head); font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 700; line-height: 1.15; color: var(--white); margin-top: 20px;" class="reveal">
+            Young People<br>as <em style="color: var(--gold);">Architects</em><br>of Peace.
+          </h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p style="color: rgba(255,255,255,0.75); line-height: 1.8; margin-top: 24px; font-size: 1.1rem;" class="reveal reveal-delay-2">
+            The Youth in Peace &amp; Security (YPS) program empowers young Ghanaians to become active contributors to peacebuilding and community security — fulfilling MYD's Community Resilience mandate.
+          </p>
+
+          <div style="margin-top: 40px; padding: 32px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid var(--gold); border-radius: 10px;" class="reveal reveal-delay-3">
+            <p style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; margin-bottom: 12px;">Key Milestone · October 2024</p>
+            <p style="color: rgba(255,255,255,0.82); font-size: 1rem; line-height: 1.75;">
+              <strong style="color: var(--white);">Youth Action Plan on Peace &amp; Security Townhall</strong> held in Tamale ahead of Ghana's 2024 general elections — an inclusive platform for youth dialogue on peacebuilding.
+            </p>
+          </div>
+
+          <div style="margin-top: 24px; padding: 32px; background: rgba(233,168,37,0.08); border: 1px solid rgba(233,168,37,0.2); border-radius: 10px;" class="reveal reveal-delay-3">
+            <p style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase; margin-bottom: 12px;">#YouthForPeace Campaign</p>
+            <p style="color: rgba(255,255,255,0.7); font-size: 1rem; line-height: 1.75; margin-bottom: 16px;">Digital and broadcast campaign across 2 radio stations and 1 TV station, promoting peace messages ahead of Ghana's 2024 elections.</p>
+            <div style="font-family: var(--font-head); font-size: 3.5rem; font-weight: 700; color: var(--gold); line-height: 1;">1M+</div>
+            <div style="font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.45); text-transform: uppercase; margin-top: 4px;">People reached by campaign</div>
+          </div>
+
+          <div style="margin-top: 32px;" class="reveal reveal-delay-4">
+            <a href="contact.html" class="btn btn--primary">Get Involved →</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="img-slot reveal" style="min-height: 480px; border-radius: 12px;">
+            <img src="assets/images/prog-yps.jpg" alt="YPS Townhall Tamale 2024" />
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px;" class="reveal reveal-delay-1">
+            <div style="background: rgba(255,255,255,0.06); padding: 28px 20px; text-align: center; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+              <div style="font-family: var(--font-head); font-size: 2rem; font-weight: 700; color: var(--gold);">2</div>
+              <div style="font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 6px;">Radio Stations</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.06); padding: 28px 20px; text-align: center; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+              <div style="font-family: var(--font-head); font-size: 2rem; font-weight: 700; color: var(--gold);">1</div>
+              <div style="font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 6px;">TV Station</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.06); padding: 28px 20px; text-align: center; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08);">
+              <div style="font-size: 1.8rem;">✌️</div>
+              <div style="font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); text-transform: uppercase; margin-top: 6px;">Peace Ambassadors</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============================================================
+     PANEL 4: VOLUNTEER PROGRAM
+     ============================================================ -->
+<div id="panel-volunteers" class="program-panel">
+  <section style="padding: 80px 40px; background: var(--cream);">
+    <div style="max-width: var(--max-w); margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;" class="program-layout">
+        <div>
+          <div class="program-hero-label">04 · Capacity Development</div>
+          <h2 class="section__title reveal" style="font-size: clamp(2.2rem, 4vw, 3.4rem);">The Backbone<br>of <em>Everything</em><br>We Do.</h2>
+          <div class="divider reveal reveal-delay-1"></div>
+          <p style="color: var(--text-mid); line-height: 1.8; margin-top: 24px; font-size: 1.1rem;" class="reveal reveal-delay-2">
+            The MYD Volunteer Program is critical to the organisation's entire mission. Our 150+ volunteers are the backbone of all program delivery — from facilitating workshops to running radio campaigns.
+          </p>
+          <p style="color: var(--text-mid); line-height: 1.8; margin-top: 16px; font-size: 1.05rem;" class="reveal reveal-delay-3">
+            Regular engagement sessions in Tamale build volunteer capacity and serve as the recruitment pathway into the network. Volunteers both grow themselves and serve their communities.
+          </p>
+
+          <div style="display: flex; gap: 32px; margin-top: 40px;" class="reveal reveal-delay-3">
+            <div>
+              <div style="font-family: var(--font-head); font-size: 3.2rem; font-weight: 700; color: var(--green);">150+</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Active volunteers</div>
+            </div>
+            <div>
+              <div style="font-family: var(--font-head); font-size: 3.2rem; font-weight: 700; color: var(--green);">5</div>
+              <div style="font-size: 0.8rem; color: var(--text-light); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">Regions covered</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 36px; display: flex; flex-direction: column; gap: 14px;" class="reveal reveal-delay-4">
+            <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 24px; background: var(--white); border-radius: 10px; border: 1px solid var(--border);">
+              <span style="font-size: 1.4rem;">🎯</span>
+              <div>
+                <div style="font-weight: 600; font-size: 1rem; color: var(--text-dark); margin-bottom: 5px;">Capacity Building</div>
+                <div style="font-size: 0.95rem; color: var(--text-mid); line-height: 1.65;">Regular skills and leadership development sessions ensure volunteers grow continuously.</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 24px; background: var(--white); border-radius: 10px; border: 1px solid var(--border);">
+              <span style="font-size: 1.4rem;">🤝</span>
+              <div>
+                <div style="font-weight: 600; font-size: 1rem; color: var(--text-dark); margin-bottom: 5px;">Community Service</div>
+                <div style="font-size: 0.95rem; color: var(--text-mid); line-height: 1.65;">Volunteers support vulnerable communities, promote social responsibility, and foster leadership.</div>
+              </div>
+            </div>
+            <div style="display: flex; gap: 16px; align-items: flex-start; padding: 20px 24px; background: var(--white); border-radius: 10px; border: 1px solid var(--border);">
+              <span style="font-size: 1.4rem;">⚡</span>
+              <div>
+                <div style="font-weight: 600; font-size: 1rem; color: var(--text-dark); margin-bottom: 5px;">Program Delivery</div>
+                <div style="font-size: 0.95rem; color: var(--text-mid); line-height: 1.65;">Volunteers execute all four MYD programs on the ground — they make the mission happen.</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px;" class="reveal reveal-delay-4">
+            <a href="contact.html#volunteer" class="btn btn--green">Join as a Volunteer →</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="img-slot reveal" style="min-height: 420px; border-radius: 12px; margin-bottom: 16px;">
+            <img src="assets/images/prog-volunteers.jpg" alt="MYD Volunteers" />
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;" class="reveal reveal-delay-1">
+            <div class="img-slot" style="min-height: 200px; border-radius: 10px;">
+              <img src="assets/images/prog-vol-session.jpg" alt="Volunteer Engagement Session" />
+            </div>
+            <div class="img-slot" style="min-height: 200px; border-radius: 10px;">
+              <img src="assets/images/prog-vol-community.jpg" alt="Volunteer Community Service" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-section__inner">
+    <h2 class="cta-section__title reveal">Join a Program.<br><em>Change a Life.</em></h2>
+    <p class="cta-section__body reveal reveal-delay-1">Apply for the Youth Farm Project, register for the next Meet-the-Mayor conference, or join our volunteer network.</p>
+    <div class="cta-section__actions reveal reveal-delay-2">
+      <a href="contact.html" class="btn btn--primary">Get Involved →</a>
+      <a href="impact.html" class="btn btn--outline">See Our Impact</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div>
+        <img src="assets/images/logo.png" alt="MYD Ghana" class="footer__brand-logo" />
+        <p class="footer__brand-tagline">"It's About Time"</p>
+        <p class="footer__brand-body">The Movement for Youth Development (MYD) was founded in July 2019 by young changemakers dedicated to channelling Ghana's greatest untapped resource — its youth.</p>
+      </div>
+      <div>
+        <p class="footer__col-title">Navigate</p>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About MYD</a>
+          <a href="programs.html">Programs</a>
+          <a href="impact.html">Our Impact</a>
+          <a href="team.html">The Team</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__col-title">Programs</p>
+        <div class="footer__links">
+          <a href="programs.html#yfp">01 · Youth Farm Project</a>
+          <a href="programs.html#mtm">02 · Meet-the-Mayor</a>
+          <a href="programs.html#yps">03 · Youth in Peace &amp; Security</a>
+          <a href="programs.html#volunteers">04 · Volunteer Program</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__col-title">Contact Us</p>
+        <div class="footer__contact-item"><span>📧</span><span><a href="mailto:info@mydghana.org" style="color: var(--gold);">info@mydghana.org</a></span></div>
+        <div class="footer__contact-item"><span>📞</span><span>+233 246 086 183</span></div>
+        <div class="footer__contact-item"><span>📍</span><span>Old State Construction Building, Tamale</span></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Movement for Youth Development (MYD Ghana) · dba Betterway Group.</p>
+      <div class="footer__social">
+        <a href="https://facebook.com/mydghana" target="_blank" title="Facebook">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://twitter.com/mydghana" target="_blank" title="Twitter / X">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M4 20L20 4" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="https://linkedin.com/company/mydghana" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/mydghana" target="_blank" title="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
