@@ -234,15 +234,19 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    /* Handle hash links like #yfp, #mtm */
-    const hash = window.location.hash.replace('#', '');
-    if (hash && document.querySelector(`[data-tab="${hash}"]`)) {
-      activateTab(hash);
-      setTimeout(() => {
-        document.getElementById(`panel-${hash}`)?.scrollIntoView({ behavior: 'smooth' });
-      }, 150);
-    }
+    /* Handle hash links — on load AND when hash changes while already on page */
+const handleHash = () => {
+  const hash = window.location.hash.replace('#', '');
+  if (hash && document.querySelector(`[data-tab="${hash}"]`)) {
+    activateTab(hash);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   }
+};
+
+handleHash();
+window.addEventListener('hashchange', handleHash);
 
   /* ---- SMOOTH HERO PARALLAX (requestAnimationFrame throttled) ---- */
   const heroBg = document.querySelector('.hero__bg');
