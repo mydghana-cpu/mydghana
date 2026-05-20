@@ -1589,3 +1589,294 @@ ul { list-style: none; }
   .programs-tabs { gap: 0; }
   .programs-tab { padding: 14px 18px; font-size: 0.6rem; }
 }
+
+/* ============================================
+   MOBILE OPTIMIZATIONS
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  /* ——— Global Spacing ——— */
+  .section {
+    padding: 48px 20px !important;
+  }
+
+  body [style*="padding: 100px 40px"],
+  body [style*="padding: 80px 40px"] {
+    padding: 48px 20px !important;
+  }
+
+  /* ——— Typography ——— */
+  .section__title,
+  h2[style*="font-size: clamp"] {
+    font-size: 1.7rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .section__body,
+  .page-hero__subtitle {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+
+  .section__overline {
+    font-size: 0.6rem !important;
+    letter-spacing: 0.15em !important;
+  }
+
+  /* ——— Hero ——— */
+  .hero__content {
+    padding: 60px 20px 40px !important;
+  }
+
+  .hero__title {
+    font-size: 2.2rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero__body {
+    font-size: 0.95rem !important;
+  }
+
+  .hero__stats {
+    flex-direction: row !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    padding: 16px 20px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .hero__stat {
+    flex-shrink: 0 !important;
+    min-width: 100px !important;
+  }
+
+  .hero__stat-num {
+    font-size: 1.6rem !important;
+  }
+
+  .hero__stat-label {
+    font-size: 0.6rem !important;
+  }
+
+  .hero__actions {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .hero__actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* ——— Impact Bar ——— */
+  .impact-bar__inner {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2px !important;
+  }
+
+  .impact-num__value {
+    font-size: 2rem !important;
+  }
+
+  .impact-num__label {
+    font-size: 0.55rem !important;
+  }
+
+  /* ——— Mandates Strip ——— */
+  .mandates-strip__inner {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .mandate-item__body {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* ——— Program Cards ——— */
+  .programs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .program-card {
+    padding: 20px !important;
+  }
+
+  .program-card__body {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    font-size: 0.9rem !important;
+  }
+
+  .program-card__title {
+    font-size: 1.2rem !important;
+  }
+
+  /* ——— Collages / Images ——— */
+  .collage__sub {
+    display: none !important;
+  }
+
+  .collage {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .collage__main {
+    min-height: 240px !important;
+  }
+
+  .img-slot {
+    min-height: 220px !important;
+  }
+
+  /* ——— Two-Column Layouts ——— */
+  [style*="grid-template-columns: 1fr 1fr"],
+  .program-layout,
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ——— Vision / Mission Split ——— */
+  .vm-panel {
+    padding: 40px 24px !important;
+  }
+
+  .vm-panel__title {
+    font-size: 1.6rem !important;
+  }
+
+  .vm-panel__body {
+    font-size: 0.9rem !important;
+  }
+
+  /* ——— SDG Grid ——— */
+  [style*="grid-template-columns: repeat(4, 1fr)"] {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ——— Impact Cards ——— */
+  .impact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .impact-card__num {
+    font-size: 2.5rem !important;
+  }
+
+  /* ——— Team Grid ——— */
+  .team-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ——— CTA Section ——— */
+  .cta-section {
+    padding: 60px 20px !important;
+  }
+
+  .cta-section__title {
+    font-size: 1.8rem !important;
+  }
+
+  .cta-section__actions {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .cta-section__actions .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* ——— Footer ——— */
+  .footer {
+    padding: 48px 20px 24px !important;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+
+  .footer__brand-logo {
+    width: 100px !important;
+  }
+
+  .footer__brand-body {
+    font-size: 0.85rem !important;
+  }
+
+  /* ——— Page Hero (inner pages) ——— */
+  .page-hero__inner {
+    padding: 48px 20px !important;
+  }
+
+  .page-hero__title {
+    font-size: 2rem !important;
+  }
+
+  .page-hero__subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  /* ——— Timeline ——— */
+  .timeline-item {
+    padding-left: 20px !important;
+  }
+
+  /* ——— Program Detail Items ——— */
+  [style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .program-detail-item {
+    padding: 20px !important;
+  }
+
+  /* ——— Tabs (Programs page) ——— */
+  .programs-tab {
+    padding: 14px 16px !important;
+    font-size: 0.6rem !important;
+  }
+
+  /* ——— Forms ——— */
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-form {
+    padding: 24px !important;
+  }
+
+  /* ——— Contact Info ——— */
+  .contact-info__item {
+    padding: 12px 0 !important;
+  }
+
+  /* ——— Volunteer Stats ——— */
+  [style*="grid-template-columns: 1fr 1fr; gap: 2px"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* ——— Buttons ——— */
+  .btn {
+    font-size: 0.85rem !important;
+    padding: 12px 20px !important;
+  }
+
+  /* ——— Breadcrumb ——— */
+  .breadcrumb {
+    font-size: 0.7rem !important;
+  }
+
+  /* ——— Divider ——— */
+  .divider {
+    margin: 16px 0 !important;
+  }
+
+}
