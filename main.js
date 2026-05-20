@@ -14,9 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nav.classList.remove('transparent');
       } else {
         nav.classList.remove('scrolled');
-        if (isTransparent) {
-          nav.classList.add('transparent');
-        }
+        if (isTransparent) nav.classList.add('transparent');
       }
     };
     updateNav();
@@ -44,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    /* Close on Escape */
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
         burger.classList.remove('open');
@@ -171,18 +168,18 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = `mailto:info@mydghana.org?subject=${mailSubject}&body=${mailBody}`;
 
       const btn = contactForm.querySelector('.btn[type="submit"]');
-      btn.textContent = 'Opening Email Client ✓';
-      btn.style.background    = 'var(--green)';
-      btn.style.borderColor   = 'var(--green)';
-      btn.style.color         = 'white';
-      btn.disabled            = true;
+      btn.textContent      = 'Opening Email Client ✓';
+      btn.style.background = 'var(--green)';
+      btn.style.borderColor = 'var(--green)';
+      btn.style.color      = 'white';
+      btn.disabled         = true;
 
       setTimeout(() => {
-        btn.textContent         = 'Send via Email →';
-        btn.style.background    = '';
-        btn.style.borderColor   = '';
-        btn.style.color         = '';
-        btn.disabled            = false;
+        btn.textContent       = 'Send via Email →';
+        btn.style.background  = '';
+        btn.style.borderColor = '';
+        btn.style.color       = '';
+        btn.disabled          = false;
         contactForm.reset();
       }, 5000);
     });
@@ -195,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       window.open('https://forms.gle/UXujGbHb64DSsJGb9', '_blank', 'noopener,noreferrer');
 
-      const btn = volunteerForm.querySelector('.btn[type="submit"]');
+      const btn  = volunteerForm.querySelector('.btn[type="submit"]');
       const orig = btn.textContent;
       btn.textContent      = 'Opening Application Form ✓';
       btn.style.background = 'var(--green)';
@@ -235,20 +232,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* Handle hash links — on load AND when hash changes while already on page */
-const handleHash = () => {
-  const hash = window.location.hash.replace('#', '');
-  if (hash && document.querySelector(`[data-tab="${hash}"]`)) {
-    activateTab(hash);
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
-  }
-};
+    const handleHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && document.querySelector(`[data-tab="${hash}"]`)) {
+        activateTab(hash);
+        setTimeout(() => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
+      }
+    };
 
-handleHash();
-window.addEventListener('hashchange', handleHash);
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
 
-  /* ---- SMOOTH HERO PARALLAX (requestAnimationFrame throttled) ---- */
+  } // <-- closes if (tabs.length && panels.length)
+
+  /* ---- SMOOTH HERO PARALLAX ---- */
   const heroBg = document.querySelector('.hero__bg');
   if (heroBg) {
     let ticking = false;
@@ -263,29 +262,27 @@ window.addEventListener('hashchange', handleHash);
     }, { passive: true });
   }
 
-  /* ---- TOPBAR DISMISS ---- */
+  /* ---- TOPBAR — shift nav down if present ---- */
   const topbar = document.querySelector('.topbar');
   if (topbar) {
-    /* Shift nav down if topbar present */
     const topbarH = topbar.offsetHeight;
     const navEl   = document.getElementById('mainNav');
     if (navEl) navEl.style.top = topbarH + 'px';
   }
 
-});
+  /* ---- SCROLL TO TOP BUTTON ---- */
+  const scrollBtn = document.createElement('button');
+  scrollBtn.id = 'scrollTopBtn';
+  scrollBtn.setAttribute('aria-label', 'Scroll to top');
+  scrollBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>`;
+  document.body.appendChild(scrollBtn);
 
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
 
-/* ---- SCROLL TO TOP BUTTON ---- */
-const scrollBtn = document.createElement('button');
-scrollBtn.id = 'scrollTopBtn';
-scrollBtn.setAttribute('aria-label', 'Scroll to top');
-scrollBtn.innerHTML = `<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>`;
-document.body.appendChild(scrollBtn);
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-window.addEventListener('scroll', () => {
-  scrollBtn.classList.toggle('visible', window.scrollY > 600);
-}, { passive: true });
-
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+}); // <-- closes DOMContentLoaded
