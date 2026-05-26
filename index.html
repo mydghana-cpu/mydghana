@@ -326,6 +326,65 @@
   </div>
 </div>
 
+<!-- ============ DONATE ============ -->
+<div class="donate-section" id="donate">
+  <div class="donate-section__inner">
+
+    <div class="donate-section__left reveal">
+      <p class="section__overline" style="color: var(--gold);">Support Our Work</p>
+      <h2 class="donate-section__title">
+        Fuel Youth-Led<br><em>Change in Ghana.</em>
+      </h2>
+      <div class="divider"></div>
+      <p class="donate-section__body">
+        Every contribution directly funds training, land access, and advocacy for young people across Northern Ghana. MYD is a registered non-profit — your donation makes a measurable difference.
+      </p>
+      <div class="donate-section__trust reveal reveal-delay-2">
+        <div class="donate-trust-item">
+          <span class="donate-trust-icon">✅</span>
+          <span>Registered Non-Profit (LBG) · Betterway Group</span>
+        </div>
+        <div class="donate-trust-item">
+          <span class="donate-trust-icon">📍</span>
+          <span>Tamale, Northern Ghana · Founded 2019</span>
+        </div>
+        <div class="donate-trust-item">
+          <span class="donate-trust-icon">🌱</span>
+          <span>35,000+ youth reached since inception</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="donate-section__right reveal reveal-delay-1">
+      <div class="donate-card">
+        <p class="donate-card__label">Choose an amount</p>
+        <div class="donate-amounts">
+          <button class="donate-amt" onclick="setAmount(20)">GH₵ 20</button>
+          <button class="donate-amt" onclick="setAmount(50)">GH₵ 50</button>
+          <button class="donate-amt donate-amt--active" onclick="setAmount(100)">GH₵ 100</button>
+          <button class="donate-amt" onclick="setAmount(200)">GH₵ 200</button>
+          <button class="donate-amt" onclick="setAmount(500)">GH₵ 500</button>
+          <button class="donate-amt donate-amt--custom" onclick="focusCustom()">Custom</button>
+        </div>
+        <div class="donate-custom-wrap">
+          <span class="donate-custom-prefix">GH₵</span>
+          <input type="number" id="customAmount" class="donate-custom-input" placeholder="Enter amount" min="1" />
+        </div>
+        <p class="donate-card__label" style="margin-top: 24px;">Your donation supports</p>
+        <div class="donate-impact" id="donateImpact">
+          GH₵ 100 trains one youth in Climate-Smart Agriculture for a full season.
+        </div>
+        <a href="YOUR_PAYSTACK_LINK_HERE" target="_blank" rel="noopener" class="btn btn--primary donate-btn" id="donateBtn">
+          Donate Now
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <p class="donate-card__footnote">Secured by Paystack · MoMo &amp; Card accepted</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <!-- ============ CTA ============ -->
 <div class="cta-section">
   <div class="cta-section__inner">
@@ -428,6 +487,39 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const impacts = {
+    20: "GH₵ 20 covers transport for a youth delegate to attend a Meet-the-Mayor conference.",
+    50: "GH₵ 50 provides a volunteer with training materials for one full program cycle.",
+    100: "GH₵ 100 trains one youth in Climate-Smart Agriculture for a full season.",
+    200: "GH₵ 200 sponsors two youth to participate in MYD's Peace & Security program.",
+    500: "GH₵ 500 funds a full community outreach event reaching 100+ young people."
+  };
+
+  function setAmount(val) {
+    document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('donate-amt--active'));
+    event.currentTarget.classList.add('donate-amt--active');
+    document.getElementById('customAmount').value = '';
+    document.getElementById('donateImpact').textContent = impacts[val] || impacts[100];
+  }
+
+  function focusCustom() {
+    document.querySelectorAll('.donate-amt').forEach(b => b.classList.remove('donate-amt--active'));
+    event.currentTarget.classList.add('donate-amt--active');
+    document.getElementById('customAmount').focus();
+  }
+
+  document.getElementById('customAmount')?.addEventListener('input', function() {
+    const v = parseInt(this.value);
+    if (v >= 500) document.getElementById('donateImpact').textContent = impacts[500];
+    else if (v >= 200) document.getElementById('donateImpact').textContent = impacts[200];
+    else if (v >= 100) document.getElementById('donateImpact').textContent = impacts[100];
+    else if (v >= 50) document.getElementById('donateImpact').textContent = impacts[50];
+    else if (v >= 20) document.getElementById('donateImpact').textContent = impacts[20];
+    else document.getElementById('donateImpact').textContent = "Every cedi counts — thank you for supporting MYD Ghana.";
+  });
+</script>
 
 <script src="main.js"></script>
 </body>
